@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<style>
+    
+body {
+    background-image: url(img/games_back.jpg);
+    background-size: 100%;
+}
+    
+    
+h1 {
+    font-family: SNES-Italic;
+    font-size: 90pt;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-family: SNES-Italic;
+    font-size: 60pt;
+    text-align: center;
+    color: red;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+span {
+    color: red;
+}
+
+#megaman {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+
+    
+}
+    
+#zero {
+    position: absolute;
+    left: 15%;
+    bottom: 0;
+}
+</style>
+
+<header>
+   
+<!--    This div will contain the nintendo logo-->
+    <div id="home">
+        <a href="index.html"><img src="img/home.png"></a>
+    </div>
+       
+    <div id="logo">
+        <img src="img/Nintendo_Logo.png">
+    </div>
+    
+<!--    This will be the site's running nav bar, vertical, to the left-->
+    <nav>
+       <center>
+        <ul>
+           <br>
+           <br>
+           <br>
+            <li id="specs" class="icons"><h3><a href="specs.html" style="text-decoration:none">SPECS</a></h3></li>
+            <br>
+            <li id="games" class="icons"><h3><a href="games.html" style="text-decoration:none">GAMES</a></h3></li>
+            <br>
+            <li id="preOrder" class="icons"><h5><a href="https://www.amazon.com/Placeholder-Console-1-Nintendo-Switch/dp/B0721GGGS9?tag=georiot-trd-20&ascsubtag=trd-755670349-20" style="text-decoration:none">Pre-Order!</a></h5></li>
+            <br>
+        </ul>
+        </center>
+    
+    </nav>
+    
+</header>
+
+
+
+<body>
+   
+    <h1>Featuring <span>21</span> retro games</h1>
+    <h2>Including all your favorite <span>heroes!</span></h2>
+    
+      
+    <div id="megaman">    
+        <img src="img/megaman.png"> 
+    </div>
+    
+     <div id="zero">    
+        <img src="img/Zero.png"> 
+    </div>
+    
+    
+    <br>
+    <br>
+    <center>
+    <div>
+        <img src="img/pic1.jpg" class="mySlides">
+        <img src="img/pic2.png" class="mySlides">
+        <img src="img/pic3.jpg" class="mySlides">
+        <img src="img/pic4.jpg" class="mySlides">
+        <img src="img/pic5.jpg" class="mySlides">
+        <img src="img/pic6.jpg" class="mySlides">
+        <img src="img/pic7.jpg" class="mySlides">
+        <img src="img/pic8.jpg" class="mySlides">
+        <br>
+    
+        <button class="back" onclick="plusDivs(-1)">&#9668;</button>
+        <button class="forward" onclick="plusDivs(+1)" border="none">&#9658;</button>
+        
+        
+    </div>
+    </center>
+
+<script>
+
+var slideIndex = 1;
+showDivs(slideIndex);
+    
+    
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    
+    var x = document.getElementsByClassName("mySlides");
+        
+    if (n > x.length) {slideIndex = 1}
+    
+    if (n < 1) {slideIndex = x.length}
+        
+    for (i = 0; i < x.length; i++){
+        x[i].style.display = "none";
+    }
+    
+    x[slideIndex -1].style.display = "block";
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
